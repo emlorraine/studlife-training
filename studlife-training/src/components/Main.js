@@ -2,8 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import './Main.css'
 
-const locationOptions = ['All', 'South 40', 'Village & Off Campus'];
-const styleOptions = ['All','Modern', 'Traditional'];
+const modules = ['One', 'Two', 'Three','Four','Five'];
 
 class Main extends React.Component{
   constructor(props){
