@@ -7,12 +7,6 @@ const modules = ['One', 'Two', 'Three','Four','Five'];
 class Main extends React.Component{
   constructor(props){
     super(props);
-    this.onLocationSelection = this.onLocationSelection.bind(this);
-    this.onStyleSelection = this.onStyleSelection.bind(this);
-    this.state = {
-      selectedLocation: 'All',
-      selectedStyle: 'All'
-    };
   }
   
   onLocationSelection(location) {
