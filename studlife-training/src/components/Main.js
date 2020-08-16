@@ -19,6 +19,7 @@ class Main extends React.Component {
       inclusiveInput: ''
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this); 
   }
 
   render() {
@@ -36,8 +37,10 @@ class Main extends React.Component {
           <TabPanel>
             Text for tab 1
               <form>
+                <form onSubmit={this.handleSubmit}>
                 <input type="text" name="welcomeInput" placeholder="Filler text" onChange={this.handleChange} value={this.state.welcomeInput}/>
-                <button>Submit</button>
+                  <button>Submit</button>
+                </form>
               </form>
           </TabPanel>
           <TabPanel>
@@ -82,6 +85,28 @@ class Main extends React.Component {
   handleChange(e) {
     this.setState({
       [e.target.name]: e.target.value
+    });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const itemsRef = firebase.database().ref('items');
+    const item = {
+      welcomeInput: this.state.welcomeInput,
+      reportingInput: this.state.reportingInput,
+      washuInput: this.state.washuInput,
+      newsInput: this.state.newsInput,
+      opinionInput: this.state.opinionInput,
+      inclusiveInput: this.state.inclusiveInput
+    }
+    itemsRef.push(item);
+    this.setState({
+      welcomeInput: '',
+      reportingInput: '',
+      washuInput: '',
+      newsInput: '',
+      opinionInput: '',
+      inclusiveInput: ''
     });
   }
 }
