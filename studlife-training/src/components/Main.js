@@ -4,8 +4,29 @@ import {Tab, Tabs, TabList, TabPanel} from 'react-tabs'
 import 'react-tabs/style/react-tabs.css';
 import firebase from './firebase.js'; 
 import './Main.css';
+import { GoogleSpreadsheet } from "google-spreadsheet";
+
+const { GoogleSpreadsheet } = require('google-spreadsheet');
+const private_sheet_key =  "\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDfQfHa3BAu3Vqu\nPebFgCc7TixQQy1XFSuYgWmGoxW01ITcWAoFF611M9UmOBw5n5NcdHbYC63VMKPB\nwOfNkaohgl2LYEuLc35upJA579OaR4Q2Fuj7up2HoUOU0j6VVSPs5pZMMVUWdYxw\nK+cQvOexXywvzHzOACZaqzndvR3DDtXbvuRNs8Af8rpRm+lqiSFFsSJmeGb1bKBT\nRVWrzHG2H1rSKaQqypUoChuSLO/Ye9A1g5t0ZWES8MLY6OyA+9DqVqlQixxc/7qg\naGxHBHvPFzs5F5DLzRpjtbR82mhCTgnZf+RShEMmJP6ub2IgHGIzAzGwZ7Ai6Zb2\nPOKKeI/JAgMBAAECggEAFoIq2hU5ucqDVpx9ubJpQidoJvy+2NAU7HPk/w1OJkRk\nKLrk4mKNZbWWFcZZF3jT0zcYDEFmgzSQ2KXpjjt+BZGD0Nt316q14n3LigEjOk4K\nMacu/MIcbmIp0sU8811Ow+xI1uGvtxX0KhL4YXhKJlh2t1L3JOW1ot/ZyQCaEYzV\nwvNVgxAAq+n8GBJDnslhtOTSd5JHa+gqrpIW1XDJxKQ62YmTGEdBmGOm+NsHoNyV\nl5CcZLpsQ6Y/Ao1uI/wS6O2vPj+P0hwN3KAmzYFpCg3jR4VjY+N0C21qZubuhSKu\n72AcCpmiP2P0uGppr9owmA74fYeUKFuZl4WfsQZPaQKBgQD6FZnV1gyRLE3+xjS6\nhatPsXKH7VUPgRApFdgyA0D7Wyn4tKYX48vz1ZT9IDaZgafwz+j7e+tUYRq+MI/x\n2nTQTt1YEDb0hiREAuTjr4W5757PBSWbCFdoezTf25dFCDXRGxABpi87uYBH//qg\noZ5Jpni70/a7NzHQvwT/CbguWwKBgQDkieSRM/Im6/+M14kitpeYC5V+e/NPrCtx\nlJkf9QQRH87j/zmL8n3SSJFmzQM1JueqpX/QqOOajLLdLzbUuqP5hFVHLiOeXAqA\nK/2t7eNKvYuxFpo016BD4/PHun9/pMbuqVhgg8QXKrEbjwDGkoP3wuDDOmHBSg7Z\nSU3FcAobqwKBgQCcAqW5VJL6bZ0qdxOl2IWKbbR5P4F07praRppceNMs+y4vzOJg\nvOca8f7D+jiVguD1xX4ehKvGM92vEDR8OD/vQ4Op0FO4L4aoNvX7ZCAUYnu7wgY3\ntPhyYYoWrLKtifWowS03GikVJR/1yqbbVneckpF2+0BMgp49Dy1avQF9SQKBgEIq\nYhBf97WpEd2W8U8pig4tHGT4QeNJN3K00PhdmYXTrbR4yhJobGEbPW2D4W/cCapw\nK+cfXnX6UjaTWs6QErVEyOPIyespPqkJE3LtsqaK5gypPJAb9XxyXLvwlMVB0Y57\nXOjkfTsv0wLljhXviWGL/ELJfk/VvyLNhESrQWHtAoGBANSglqDFZqqZM6o6kF+2\nYQ1LWZ9ZiN5TEG5efumfHaA5Y0yCfBeBBY2p9nsQdLjEM2nYq8QY+bDQEd9mOu3d\nWvnMr9c+72k4JwZmnfHCioN1c0/cRf7exK641dD/KqFRp91cy/KkMOUenxKXTU1y\ngQjZ8SOAKxdIb5qsRbdXVgRa\n-----END PRIVATE KEY-----\n",
 
 const modules = ['Welcome to Student Life', 'Reporting 101', 'Washington University 101', 'News & Writing from Reporting', 'Opinion & Writing from Experience', 'Inclusive Reporting'];
+const doc = new GoogleSpreadsheet('1vFolZ0BmiI2VclYyigkHfgRs1lAMdLMUvyMgKFMDuIU');
+
+const appendSpreadsheet = async (row) => {
+  try {
+    await doc.useServiceAccountAuth({
+      client_email: 'studlife-training-sheets@studlife-training-286617.iam.gserviceaccount.com',
+      private_key: private_sheet_key,
+    });
+    await doc.loadInfo();
+    const sheet = doc.sheetsById[0];
+    const result = await sheet.addRow(row);
+  } catch (e) {
+    console.error('Error: ', e);
+  }
+};
+const newRow = {userName: "",	welcomeInput: "",	reportingInput: "",	washuInput: "",	newsInput: "",	opinionInput: "",	inclusiveInput: ""}; 
+appendSpreadsheet(newRow);
 
 class Main extends React.Component {
   constructor(props) {
@@ -26,6 +47,8 @@ class Main extends React.Component {
       [e.target.name]: e.target.value
     });
   }
+
+
 
   handleSubmit(e) {
     e.preventDefault();
