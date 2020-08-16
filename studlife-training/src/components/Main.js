@@ -63,37 +63,37 @@ class Main extends React.Component {
     const newRow = {userName: "",	welcomeInput: "",	reportingInput: "",	washuInput: "",	newsInput: "",	opinionInput: "",	inclusiveInput: ""}; 
     appendSpreadsheet(newRow);
 
-    this.setState({
-      welcomeInput: '',
-      reportingInput: '',
-      washuInput: '',
-      newsInput: '',
-      opinionInput: '',
-      inclusiveInput: ''
-    });
+    // this.setState({
+    //   welcomeInput: '',
+    //   reportingInput: '',
+    //   washuInput: '',
+    //   newsInput: '',
+    //   opinionInput: '',
+    //   inclusiveInput: ''
+    // });
   }
 
-  componentDidMount() {
-    const itemsRef = firebase.database().ref('items');
-    itemsRef.on('value', (snapshot) => {
-      let items = snapshot.val();
-      let newState = [];
-      for (let item in items) {
-        newState.push({
-          id: item,
-          welcomeInput: items[item].welcomeInput,
-          reportingInput: items[item].reportingInput,
-          washuInput: items[item].washuInput,
-          newsInput: items[item].newsInput,
-          opinionInput: items[item].opinionInput,
-          inclusiveInput: items[item].inclusiveInput
-        });
-      }
-      this.setState({
-        items: newState
-      });
-    });
-  }
+  // componentDidMount() {
+  //   const itemsRef = firebase.database().ref('items');
+  //   itemsRef.on('value', (snapshot) => {
+  //     let items = snapshot.val();
+  //     let newState = [];
+  //     for (let item in items) {
+  //       newState.push({
+  //         id: item,
+  //         welcomeInput: items[item].welcomeInput,
+  //         reportingInput: items[item].reportingInput,
+  //         washuInput: items[item].washuInput,
+  //         newsInput: items[item].newsInput,
+  //         opinionInput: items[item].opinionInput,
+  //         inclusiveInput: items[item].inclusiveInput
+  //       });
+  //     }
+  //     this.setState({
+  //       items: newState
+  //     });
+  //   });
+  // }
 
 
 render() {
