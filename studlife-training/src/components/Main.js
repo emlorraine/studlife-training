@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs'
+import firebase from './firebase.js'; 
 import 'react-tabs/style/react-tabs.css';
 import './Main.css';
 
@@ -17,6 +18,7 @@ class Main extends React.Component {
 
   render() {
     return (
+      <>
         <Tabs defaultIndex = {1} onSelect={index => console.log(index)}>
           <TabList>
             <Tab>Welcome to Student Life</Tab>
@@ -39,9 +41,9 @@ class Main extends React.Component {
           <TabPanel>Text for tab 5</TabPanel>
           <TabPanel>Text for tab 6</TabPanel>
         </Tabs>
+        </>
     )
   }
-
   handleChange(e) {
     this.setState({
       [e.target.name]: e.target.value
