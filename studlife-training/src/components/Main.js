@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs'
-import firebase from 'firebase.js'; 
 import 'react-tabs/style/react-tabs.css';
+import './firebase.js'
 import './Main.css';
 
 const modules = ['Welcome to Student Life', 'Reporting 101', 'Washington University 101', 'News & Writing from Reporting', 'Opinion & Writing from Experience', 'Inclusive Reporting'];
