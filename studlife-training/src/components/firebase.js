@@ -1,7 +1,5 @@
 import firebase from 'firebase';
 
-/* <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script> */
 const firebaseConfig = {
     apiKey: "AIzaSyA7SnRoem-ZgKA6EOyLLLBoJEo99TBWeO8",
     authDomain: "studlife-training-4f3d6.firebaseapp.com",
