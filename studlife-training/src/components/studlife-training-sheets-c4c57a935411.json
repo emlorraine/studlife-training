@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "studlife-training-sheets",
+  "private_key_id": "c4c57a935411774f98e7b4f7ccc5b3277ca57aff",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCb51g+UpK3ILUu\nzeMUzYRKpNW9Yv3QDICMAfRZLxgAzinJiLyaFMYXHjSlQ1eMmnygA+bTDowTDrPM\nrru0Akc4it0YqQRoaEMsM6EYgOMmKfFfk17c7CQyEZnWCjK9AqhKrMbK1UPosPpT\nqxBHwBnXhcu62wzYRUghB+rTbU77ygaw7sFSwd/kifSTAF9CCMRicxtFJoTEjHnV\n4qkpJFZPKFS9/w/hBdxsK/JzQx8yt11mmU9+SoeD/DNEvxwlIeBtbj5Bh5IdA626\noMXVNA4y7+Jk6WoUPZuj6fclKGQLi7fn6iCvf5Mnt7AdcFSZzvNEqUOwygZK+KHK\njQm880bZAgMBAAECggEADklJU1CyxBg5siPIws/AZyyqr3OiSY3Tu8C0GPYRT4WU\n27Rtf/sWWej5Lwm4PJitgeZJoR6MpHRs8n0ykyDAUQSclRVr43tmaGcExJ+O8SDX\nzwfMohb7jCEDxVLi6mITdOBXSR/43JpXHhKnZ8PJOnA2xpUrHKhgnzJACQbTvYvV\noTekP0tnBssKbaLGQUzWLitUiWcxcsOW3Ywx82cREvyJ8zVJPB0Qdbo4MhGFZIM+\ndKfWnO/cs/HvQxZc8TpILfwX+Sna21lp1lSLDB5N/sIUVrw3od20pMqz1MDfBXvk\nvaV+YvgoUgNB+i4tcqJWeyUV7S7ThDTROkgXbn7k+QKBgQDRFsvf59qU2qnomanc\nMusY1sk7C0rNs2SgaDEJRJOOAur1LiszbOOe53/fd4w5b/H5Pu28RaWPduchZ4/Q\nRO6bT2Mob9j8C4tqsY8LDj4JOz6W+UIMP1iveYHMEVOgT3nwMPD7myk1nUWVceU1\ndroa4IyzWT0cqzrCSlpJPK+nbQKBgQC+4c2QG7HuVieGGDEReYKtUHmHBJBgjl9j\nN2I7EwzZ261AiitbUVDJWHskFgGlinm6hdJwo3hf4PprMG5c1nNHfj37/0IZHjmn\nwQiiQmq1JQuN7W5blxHfdnYJzvqbLkBG+ksjOgoiiXZCw5QsrehF8dhxIIzRn46U\nnwaUp6NdnQKBgAYPzyFSq3edT0e7DL2hjEdQEs1val/ET6qG2sUWA+EeHIm3KPF4\nurCkrYRhBuOzZyR+uo22xzH9lH3Xbsfu96vxBULq2zOTchtJwofjhdDmss3VtCB+\nxadwsl6kMfR32WUpRhNFUFCJmrbWcnq2UnbtA6c/cxIdtLplRXDSHZWRAoGBAIzK\nmken1dbY3zAuGcss1/EkAW9QM3m0qbDRwfeWtozeVmzbPN2PHcpVJAba4H4MpHqq\niCyitn/pvmtffpelacQa3ndHsKY8QAR3AfpEiNZxq5MUxKhzxjAP/UKA0yGwvKJd\nrRwfjCgrQfo+rcVCxKcKmj3e518alB0VKtJsz7eVAoGASiCHUhHtYUOkquGNL7PD\nJHJWd6fUUhACrmeENN45j6wlLU/JQsfSkNOLwGDk/oNR1tc/UJxCWeVUSSkIoz/Z\n313YENPtZoxmHEV7GVFF4kKgX0JeJAjC3cRqW73J8iUh9jI1ycMf8GD2XuF7bC19\nO7+kByGGdKJ6hWylM4oxC3I=\n-----END PRIVATE KEY-----\n",
+  "client_email": "studlife-training-sheets@studlife-training-sheets.iam.gserviceaccount.com",
+  "client_id": "102015440247479962455",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/studlife-training-sheets%40studlife-training-sheets.iam.gserviceaccount.com"
+}
