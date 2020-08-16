@@ -70,7 +70,7 @@ class Main extends React.Component {
       });
     });
   }
-}
+
 
 render() {
   return (
@@ -131,5 +131,6 @@ render() {
       </Tabs>
       </>
   )
+}
 }
 export default Main;
