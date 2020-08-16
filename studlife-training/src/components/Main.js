@@ -57,8 +57,12 @@ class Main extends React.Component {
       for (let item in items) {
         newState.push({
           id: item,
-          title: items[item].title,
-          user: items[item].user
+          welcomeInput: items[item].welcomeInput,
+          reportingInput: items[item].reportingInput,
+          washuInput: items[item].washuInput,
+          newsInput: items[item].newsInput,
+          opinionInput: items[item].opinionInput,
+          inclusiveInput: items[item].inclusiveInput
         });
       }
       this.setState({
