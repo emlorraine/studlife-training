@@ -10,7 +10,9 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      userInput: ''
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
   render() {
@@ -24,8 +26,13 @@ class Main extends React.Component {
             <Tab>Opinion and Writing from Experience</Tab>
             <Tab>Inclusive Reporting</Tab>
           </TabList>
-
-          <TabPanel>Text for tab 1</TabPanel>
+          <TabPanel>
+            Text for tab 1
+              <form>
+                <input type="text" name="userInput" placeholder="Filler text" onChange={this.handleChange} value={this.state.userInput}/>
+                <button>Submit</button>
+              </form>
+          </TabPanel>
           <TabPanel>Text for tab 2</TabPanel>
           <TabPanel>Text for tab 3</TabPanel>
           <TabPanel>Text for tab 4</TabPanel>
@@ -34,6 +41,11 @@ class Main extends React.Component {
         </Tabs>
     )
   }
-}
 
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+}
 export default Main;
