@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs'
-// import firebase from './firebase.js'; 
+import firebase from './firebase.js'; 
 import 'react-tabs/style/react-tabs.css';
 import './Main.css';
 
