@@ -26,7 +26,6 @@ class Main extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this); 
 
-
     this.handleWelcomeChange = this.handleWelcomeChange.bind(this);
     this.handleReportingChange = this.handleReportingChange.bind(this);
     this.handleWashUChange = this.handleWashUChange.bind(this);
@@ -136,49 +135,63 @@ render() {
           <Tab>News and Writing from Reporting</Tab>
           <Tab>Opinion and Writing from Experience</Tab>
           <Tab>Inclusive Reporting</Tab>
+          <Tab>Submit</Tab>
         </TabList>
         <TabPanel>
           Text for tab 1
-            <form onSubmit={this.handleSubmit}>
-              <input type="text" name="welcomeInput" placeholder="Filler text" onChange={this.handleWelcomeChange} value={this.state.welcomeInput}/>
+          {/* <form onSubmit={this.handleSubmit}> */}
+          <form>              
+            <input type="text" name="welcomeInput" placeholder="Filler text" onChange={this.handleWelcomeChange} value={this.state.welcomeInput}/>
               <button>Submit</button>
             </form>
         </TabPanel>
         <TabPanel>
           Text for tab 2
-          <form onSubmit={this.handleSubmit}>
-              <input type="text" name="reportingInput" placeholder="Filler text" onChange={this.handleReportingChange} value={this.state.reportingInput}/>
+          {/* <form onSubmit={this.handleSubmit}> */}
+          <form>              
+            <input type="text" name="reportingInput" placeholder="Filler text" onChange={this.handleReportingChange} value={this.state.reportingInput}/>
               <button>Submit</button>
             </form>
         </TabPanel>
         <TabPanel>
           Text for tab 3
-          <form onSubmit={this.handleSubmit}>
+          {/* <form onSubmit={this.handleSubmit}> */}
+          <form>              
               <input type="text" name="washuInput" placeholder="Filler text" onChange={this.handleWashUChange} value={this.state.washuInput}/>
               <button>Submit</button>
             </form>
         </TabPanel>
         <TabPanel>
           Text for tab 4
-          <form onSubmit={this.handleSubmit}>
+          {/* <form onSubmit={this.handleSubmit}> */}
+          <form>              
               <input type="text" name="newsInput" placeholder="Filler text" onChange={this.handleNewsChange} value={this.state.newsInput}/>
               <button>Submit</button>
             </form>
             </TabPanel>
         <TabPanel>
           Text for tab 5
-          <form onSubmit={this.handleSubmit}>
-              <input type="text" name="opinionInput" placeholder="Filler text" onChange={this.handleOpinionChange} value={this.state.opinionInput}/>
+          {/* <form onSubmit={this.handleSubmit}> */}
+          <form>
+            <input type="text" name="opinionInput" placeholder="Filler text" onChange={this.handleOpinionChange} value={this.state.opinionInput}/>
               <button>Submit</button>
             </form>
             </TabPanel>
+        <TabPanel>
+          Text for tab 6
+          {/* <form onSubmit={this.handleSubmit}> */}
+          <form>
+              <input type="text" name="inclusiveInput" placeholder="Filler text" onChange={this.handleInclusiveChange} value={this.state.inclusiveInput}/>
+              <button>Submit</button>
+            </form>
+        </TabPanel>
         <TabPanel>
           Text for tab 6
           <form onSubmit={this.handleSubmit}>
               <input type="text" name="inclusiveInput" placeholder="Filler text" onChange={this.handleInclusiveChange} value={this.state.inclusiveInput}/>
               <button>Submit</button>
             </form>
-            </TabPanel>
+        </TabPanel>
       </Tabs>
       </>
   )
