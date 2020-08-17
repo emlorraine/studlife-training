@@ -86,14 +86,21 @@ class Main extends React.Component {
 
   handleWelcomeSubmit = async function(e) {
     e.preventDefault();
+    // console.log(sendWelcomeInput); 
+    // console.log(sendWelcomeInput.length); 
     if(sendWelcomeInput.legnth >= 1){
+      console.log("*confusion (cont.)*")
       console.log(sendWelcomeInput); 
-      module_tracker.push(sendWelcomeInput); 
-      break;  
+      module_tracker.push(sendWelcomeInput);
+      if(module_tracker.legnth === 6){
+        console.log("WE READY TO PUSH TO GOOGLE"); 
+      }
     }
-    else if (sendWelcomeInput == "" || (sendWelcomeInput.replace(/\s/g, '').length == 0)){
+    else if (sendWelcomeInput === "" || (sendWelcomeInput.replace(/\s/g, '').length === 0)){
       alert("Please complete this module before submitting.");
     }
+
+    
   }
 
   handleReportingSubmit = async function(e) {
@@ -101,9 +108,9 @@ class Main extends React.Component {
     if(sendReportingInput.legnth >= 1){
       console.log(sendReportingInput); 
       module_tracker.push(sendReportingInput);
-      break;   
+      console.log("SUCESSFUL SUBMIT 2"); 
     }
-    else if (sendReportingInput == "" || (sendReportingInput.replace(/\s/g, '').length == 0)){
+    else if (sendReportingInput === "" || (sendReportingInput.replace(/\s/g, '').length === 0)){
       alert("Please complete this module before submitting.");
     }
   }
@@ -113,9 +120,9 @@ class Main extends React.Component {
     if(sendWashuInput.legnth >= 1){
       console.log(sendWashuInput); 
       module_tracker.push(sendWashuInput); 
-      break;  
+      console.log("SUCESSFUL SUBMIT 3"); 
     }
-    else if (sendWashuInput == "" || (sendWashuInput.replace(/\s/g, '').length == 0)){
+    else if (sendWashuInput === "" || (sendWashuInput.replace(/\s/g, '').length === 0)){
       alert("Please complete this module before submitting.");
     }
   }
@@ -125,9 +132,10 @@ class Main extends React.Component {
     if(sendNewsInput.legnth >= 1){
       console.log(sendNewsInput); 
       module_tracker.push(sendNewsInput); 
-      break;  
+      console.log("SUCESSFUL SUBMIT 4"); 
+
     }
-    else if (sendNewsInput == "" || (sendNewsInput.replace(/\s/g, '').length == 0)){
+    else if (sendNewsInput === "" || (sendNewsInput.replace(/\s/g, '').length === 0)){
       alert("Please complete this module before submitting.");
     }
   }
@@ -137,9 +145,10 @@ class Main extends React.Component {
     if(sendOpinionInput.legnth >= 1 && sendOpinionInput != ""){
       console.log(sendOpinionInput); 
       module_tracker.push(sendOpinionInput); 
-      break;  
+      console.log("SUCESSFUL SUBMIT 5"); 
+
     }
-    else if (sendOpinionInput == "" || (sendOpinionInput.replace(/\s/g, '').length == 0)){
+    else if (sendOpinionInput === "" || (sendOpinionInput.replace(/\s/g, '').length === 0)){
       alert("Please complete this module before submitting.");
     }
   }
@@ -149,9 +158,10 @@ class Main extends React.Component {
     if(sendInclusiveInput.legnth >= 1){
       console.log(sendInclusiveInput); 
       module_tracker.push(sendInclusiveInput);
-      break;  
+      console.log("SUCESSFUL SUBMIT 6"); 
+
     }
-    else if (sendInclusiveInput == "" || (sendInclusiveInput.replace(/\s/g, '').length == 0)){
+    else if (sendInclusiveInput == "" || (sendInclusiveInput.replace(/\s/g, '').length === 0)){
       alert("Please complete this module before submitting.");
     }
   }
