@@ -40,50 +40,52 @@ class Main extends React.Component {
     this.handleOpinionChange = this.handleOpinionChange.bind(this);
     this.handleInclusiveChange = this.handleInclusiveChange.bind(this);
   }
-  handleWelcomeChange(e) {
-    this.setState({welcomeInput: e.target.value});
+  handleWelcomeChange = async function(e) {
+    await this.setState({welcomeInput: e.target.value});
     sendWelcomeInput = this.state.welcomeInput;
-    // console.log(e.target.value);
+    console.log(sendWelcomeInput);
     // this.state.module_tracker.push(e.target.value);
   }
 
-  handleReportingChange(e) {
-    this.setState({reportingInput: e.target.value});
+  handleReportingChange = async function(e) {
+    await this.setState({reportingInput: e.target.value});
     sendReportingInput = this.state.reportingInput;
     // console.log(e.target.value); 
     // this.state.module_tracker.push(e.target.value); 
   }
 
-  handleWashUChange(e) {
-    this.setState({washuInput: e.target.value});
+  handleWashUChange = async function(e) {
+    await this.setState({washuInput: e.target.value});
     sendWashuInput = this.state.washuInput;
     // console.log(e.target.value);
     // this.state.module_tracker.push(e.target.value);  
   }  
   
-  handleNewsChange(e) {
-    this.setState({newsInput: e.target.value});
+  handleNewsChange = async function(e) {
+    await this.setState({newsInput: e.target.value});
     sendNewsInput = this.state.newsInput;
+    console.log(sendNewsInput); 
+    module_tracker.push(sendNewsInput); 
     // console.log(e.target.value); 
     // this.state.module_tracker.push(e.target.value); 
   }
 
-  handleOpinionChange(e) {
-    this.setState({opinionInput: e.target.value});
+  handleOpinionChange = async function(e) {
+    await this.setState({opinionInput: e.target.value});
     sendOpinionInput = this.state.opinionInput;
     // console.log(e.target.value); 
     // this.state.module_tracker.push(e.target.value); 
   }
 
-  handleInclusiveChange(e) {
-    this.setState({inclusiveInput: e.target.value});
+  handleInclusiveChange = async function(e) {
+    await this.setState({inclusiveInput: e.target.value});
     sendInclusiveInput = this.state.inclusiveInput;
     // console.log(e.target.value);
     // this.state.module_tracker.push(e.target.value);  
   }
 
-  handleSubmit(e) {
-    console.log(sendReportingInput); 
+  handleSubmit = async function(e) {
+    console.log(sendNewsInput); 
     e.preventDefault();
     // const itemsRef = firebase.database().ref('items');
     // const item = {
