@@ -89,6 +89,7 @@ class Main extends React.Component {
     if(sendWelcomeInput.legnth >= 1){
       console.log(sendWelcomeInput); 
       module_tracker.push(sendWelcomeInput); 
+      break;  
     }
     else if (sendWelcomeInput == "" || (sendWelcomeInput.replace(/\s/g, '').length == 0)){
       alert("Please complete this module before submitting.");
@@ -99,7 +100,8 @@ class Main extends React.Component {
     e.preventDefault();
     if(sendReportingInput.legnth >= 1){
       console.log(sendReportingInput); 
-      module_tracker.push(sendReportingInput); 
+      module_tracker.push(sendReportingInput);
+      break;   
     }
     else if (sendReportingInput == "" || (sendReportingInput.replace(/\s/g, '').length == 0)){
       alert("Please complete this module before submitting.");
@@ -111,6 +113,7 @@ class Main extends React.Component {
     if(sendWashuInput.legnth >= 1){
       console.log(sendWashuInput); 
       module_tracker.push(sendWashuInput); 
+      break;  
     }
     else if (sendWashuInput == "" || (sendWashuInput.replace(/\s/g, '').length == 0)){
       alert("Please complete this module before submitting.");
@@ -122,6 +125,7 @@ class Main extends React.Component {
     if(sendNewsInput.legnth >= 1){
       console.log(sendNewsInput); 
       module_tracker.push(sendNewsInput); 
+      break;  
     }
     else if (sendNewsInput == "" || (sendNewsInput.replace(/\s/g, '').length == 0)){
       alert("Please complete this module before submitting.");
@@ -133,6 +137,7 @@ class Main extends React.Component {
     if(sendOpinionInput.legnth >= 1 && sendOpinionInput != ""){
       console.log(sendOpinionInput); 
       module_tracker.push(sendOpinionInput); 
+      break;  
     }
     else if (sendOpinionInput == "" || (sendOpinionInput.replace(/\s/g, '').length == 0)){
       alert("Please complete this module before submitting.");
@@ -143,7 +148,8 @@ class Main extends React.Component {
     e.preventDefault();
     if(sendInclusiveInput.legnth >= 1){
       console.log(sendInclusiveInput); 
-      module_tracker.push(sendInclusiveInput); 
+      module_tracker.push(sendInclusiveInput);
+      break;  
     }
     else if (sendInclusiveInput == "" || (sendInclusiveInput.replace(/\s/g, '').length == 0)){
       alert("Please complete this module before submitting.");
