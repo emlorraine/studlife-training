@@ -83,7 +83,7 @@ class Main extends React.Component {
   }
 
   handleSubmit(e) {
-    console.log(e); 
+    console.log(sendReportingInput); 
     e.preventDefault();
     // const itemsRef = firebase.database().ref('items');
     // const item = {
@@ -156,7 +156,7 @@ render() {
           {/* <form onSubmit={this.handleSubmit}> */}
           <form>              
             <input type="text" name="welcomeInput" placeholder="Filler text" onChange={this.handleWelcomeChange} value={this.state.welcomeInput}/>
-              <button>Submit</button>
+            <button onClick = {this.handleSubmit}>Submit</button>
             </form>
         </TabPanel>
         <TabPanel>
@@ -164,7 +164,7 @@ render() {
           {/* <form onSubmit={this.handleSubmit}> */}
           <form>              
             <input type="text" name="reportingInput" placeholder="Filler text" onChange={this.handleReportingChange} value={this.state.reportingInput}/>
-              <button>Submit</button>
+              <button onClick = {this.handleSubmit}>Submit</button>
             </form>
         </TabPanel>
         <TabPanel>
@@ -172,7 +172,7 @@ render() {
           {/* <form onSubmit={this.handleSubmit}> */}
           <form>              
               <input type="text" name="washuInput" placeholder="Filler text" onChange={this.handleWashUChange} value={this.state.washuInput}/>
-              <button>Submit</button>
+              <button onClick = {this.handleSubmit}>Submit</button>
             </form>
         </TabPanel>
         <TabPanel>
@@ -180,7 +180,7 @@ render() {
           {/* <form onSubmit={this.handleSubmit}> */}
           <form>              
               <input type="text" name="newsInput" placeholder="Filler text" onChange={this.handleNewsChange} value={this.state.newsInput}/>
-              <button>Submit</button>
+              <button onClick = {this.handleSubmit}>Submit</button>
             </form>
             </TabPanel>
         <TabPanel>
@@ -188,7 +188,7 @@ render() {
           {/* <form onSubmit={this.handleSubmit}> */}
           <form>
             <input type="text" name="opinionInput" placeholder="Filler text" onChange={this.handleOpinionChange} value={this.state.opinionInput}/>
-              <button>Submit</button>
+            <button onClick = {this.handleSubmit}>Submit</button>
             </form>
             </TabPanel>
         <TabPanel>
@@ -196,15 +196,15 @@ render() {
           {/* <form onSubmit={this.handleSubmit}> */}
           <form>
               <input type="text" name="inclusiveInput" placeholder="Filler text" onChange={this.handleInclusiveChange} value={this.state.inclusiveInput}/>
-              <button>Submit</button>
+              <button onClick = {this.handleSubmit}>Submit</button>
             </form>
         </TabPanel>
         <TabPanel>
           Text for tab 6
           <form onSubmit={this.handleSubmit}>
               <input type="text" name="inclusiveInput" placeholder="Filler text" onChange={this.handleInclusiveChange} value={this.state.inclusiveInput}/>
-              <button>Submit</button>
-            </form>
+              <button onClick = {this.handleSubmit}>Submit</button>
+          </form>
         </TabPanel>
       </Tabs>
       </>
