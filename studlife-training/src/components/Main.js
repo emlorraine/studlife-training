@@ -25,6 +25,8 @@ class Main extends React.Component {
       inclusiveInput: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this); 
+
+
     this.handleWelcomeChange = this.handleWelcomeChange.bind(this);
     this.handleReportingChange = this.handleReportingChange.bind(this);
     this.handleWashUChange = this.handleWashUChange.bind(this);
@@ -137,44 +139,42 @@ render() {
         </TabList>
         <TabPanel>
           Text for tab 1
-            <form>
-              <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
               <input type="text" name="welcomeInput" placeholder="Filler text" onChange={this.handleWelcomeChange} value={this.state.welcomeInput}/>
-                <button>Submit</button>
-              </form>
+              <button>Submit</button>
             </form>
         </TabPanel>
         <TabPanel>
           Text for tab 2
-            <form>
+          <form onSubmit={this.handleSubmit}>
               <input type="text" name="reportingInput" placeholder="Filler text" onChange={this.handleReportingChange} value={this.state.reportingInput}/>
               <button>Submit</button>
             </form>
         </TabPanel>
         <TabPanel>
           Text for tab 3
-            <form>
+          <form onSubmit={this.handleSubmit}>
               <input type="text" name="washuInput" placeholder="Filler text" onChange={this.handleWashUChange} value={this.state.washuInput}/>
               <button>Submit</button>
             </form>
         </TabPanel>
         <TabPanel>
           Text for tab 4
-            <form>
+          <form onSubmit={this.handleSubmit}>
               <input type="text" name="newsInput" placeholder="Filler text" onChange={this.handleNewsChange} value={this.state.newsInput}/>
               <button>Submit</button>
             </form>
             </TabPanel>
         <TabPanel>
           Text for tab 5
-            <form>
+          <form onSubmit={this.handleSubmit}>
               <input type="text" name="opinionInput" placeholder="Filler text" onChange={this.handleOpinionChange} value={this.state.opinionInput}/>
               <button>Submit</button>
             </form>
             </TabPanel>
         <TabPanel>
           Text for tab 6
-            <form>
+          <form onSubmit={this.handleSubmit}>
               <input type="text" name="inclusiveInput" placeholder="Filler text" onChange={this.handleInclusiveChange} value={this.state.inclusiveInput}/>
               <button>Submit</button>
             </form>
