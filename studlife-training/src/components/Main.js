@@ -12,6 +12,13 @@ const client_email =  "studlife-training-sheets@studlife-training-sheets.iam.gse
 const doc = new GoogleSpreadsheet('1vFolZ0BmiI2VclYyigkHfgRs1lAMdLMUvyMgKFMDuIU');
 
 const modules = ['Welcome to Student Life', 'Reporting 101', 'Washington University 101', 'News & Writing from Reporting', 'Opinion & Writing from Experience', 'Inclusive Reporting'];
+var module_tracker = []; 
+var sendWelcomeInput = "";
+var sendReportingInput = ""; 
+var sendWashuInput = "";
+var sendNewsInput = ""; 
+var sendOpinionInput = "";
+var sendInclusiveInput = ""; 
 
 class Main extends React.Component {
   constructor(props) {
@@ -35,32 +42,44 @@ class Main extends React.Component {
   }
   handleWelcomeChange(e) {
     this.setState({welcomeInput: e.target.value});
-    console.log(e.target.value); 
+    sendWelcomeInput = this.state.welcomeInput;
+    // console.log(e.target.value);
+    // this.state.module_tracker.push(e.target.value);
   }
 
   handleReportingChange(e) {
     this.setState({reportingInput: e.target.value});
-    console.log(e.target.value); 
+    sendReportingInput = this.state.reportingInput;
+    // console.log(e.target.value); 
+    // this.state.module_tracker.push(e.target.value); 
   }
 
   handleWashUChange(e) {
     this.setState({washuInput: e.target.value});
-    console.log(e.target.value); 
+    sendWashuInput = this.state.washuInput;
+    // console.log(e.target.value);
+    // this.state.module_tracker.push(e.target.value);  
   }  
   
   handleNewsChange(e) {
     this.setState({newsInput: e.target.value});
-    console.log(e.target.value); 
+    sendNewsInput = this.state.newsInput;
+    // console.log(e.target.value); 
+    // this.state.module_tracker.push(e.target.value); 
   }
 
   handleOpinionChange(e) {
     this.setState({opinionInput: e.target.value});
-    console.log(e.target.value); 
+    sendOpinionInput = this.state.opinionInput;
+    // console.log(e.target.value); 
+    // this.state.module_tracker.push(e.target.value); 
   }
 
   handleInclusiveChange(e) {
     this.setState({inclusiveInput: e.target.value});
-    console.log(e.target.value); 
+    sendInclusiveInput = this.state.inclusiveInput;
+    // console.log(e.target.value);
+    // this.state.module_tracker.push(e.target.value);  
   }
 
   handleSubmit(e) {
@@ -68,12 +87,7 @@ class Main extends React.Component {
     e.preventDefault();
     // const itemsRef = firebase.database().ref('items');
     // const item = {
-     var sendWelcomeInput = this.state.welcomeInput;
-     var sendReportingInput = this.state.reportingInput;
-     var sendWashuInput = this.state.washuInput;
-     var sendNewsInput = this.state.newsInput;
-     var sendOpinionInput = this.state.opinionInput;
-     var sendInclusiveInput = this.state.inclusiveInput;
+    //  var sendWelcomeInput = this.state.welcomeInput;
     // }
     // const appendSpreadsheet = async (row) => {
     //   try {
