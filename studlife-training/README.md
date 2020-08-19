@@ -1,3 +1,12 @@
+Nathan--
+
+The idea here is that someone with an @wustl email will be able to access a set of modules in lieu of how we usually train. Each module has an associated interactive portion that the user must submit so we know they've successfully completed the materials. I shortcut the whole submission proper technique and tried for just a Google Sheet integration because we don't need *that* much.
+
+I made a note of this in the codebase but I didn't differentiate the module data in my very, very rough idea because I wanted to test the Google API functionality and it was easier to do so from one JS file. (Or so I thought.) 
+
+Happy to disucss more, but what I have to offer is more a proof of concept than a draft. 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
