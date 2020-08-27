@@ -1,0 +1,9 @@
+.nav-content{
+    font-family: Garamond; 
+    font-size: 24px; 
+}
+
+.nav-item{
+    list-style-type: none;
+    margin-bottom: 10px;
+}

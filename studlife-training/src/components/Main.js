@@ -40,7 +40,6 @@ class Main extends React.Component {
     this.handleOpinionSubmit = this.handleOpinionSubmit.bind(this); 
     this.handleInclusiveSubmit = this.handleInclusiveSubmit.bind(this); 
 
-
     this.handleWelcomeChange = this.handleWelcomeChange.bind(this);
     this.handleReportingChange = this.handleReportingChange.bind(this);
     this.handleWashUChange = this.handleWashUChange.bind(this);
@@ -48,6 +47,8 @@ class Main extends React.Component {
     this.handleOpinionChange = this.handleOpinionChange.bind(this);
     this.handleInclusiveChange = this.handleInclusiveChange.bind(this);
   }
+
+
   handleWelcomeChange = async function(e) {
     await this.setState({welcomeInput: e.target.value});
     sendWelcomeInput = this.state.welcomeInput;
@@ -260,5 +261,7 @@ render() {
   )
 }
 }
+
+
 
 export default Main;

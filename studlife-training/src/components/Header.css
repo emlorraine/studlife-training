@@ -1,0 +1,17 @@
+.header-text{
+    top: 0;
+    left: 0;
+    background-color:#b1170f;
+    color: white; 
+    font-family: Garamond; 
+    font-size: 30px; 
+    text-align: center; 
+
+}
+
+.intro-text{
+    background-color: white;
+    color: black; 
+    font-family: Arial; 
+    font-size: 26px; 
+}
