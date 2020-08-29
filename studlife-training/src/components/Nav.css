@@ -56,9 +56,11 @@ body{
     background-color:#b1170f;
     width: 25%; 
     height: 100%; 
+    float: left; 
 }
 
 .main-css{
+    height: 100%; 
     float: right; 
     width: 75%; 
 
