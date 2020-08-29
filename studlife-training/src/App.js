@@ -4,35 +4,16 @@ import Main from './components/Main.js';
 import Header from './components/Header.js'
 import Nav from './components/Nav.js'
 import Navigation from './Navigation';
-import {BrowserRouter as Router, Route, } from 'react-router-dom';
-import * as ROUTES from './components/Routes/Routes.js';
-
-// import LandingPage from '../Landing';
-// import SignUpPage from '../SignUp';
-// import SignInPage from '../SignIn';
-// import PasswordForgetPage from '../PasswordForget';
-// import HomePage from '../Home';
-// import AccountPage from '../Account';
-// import AdminPage from '../Admin';
-
+import {BrowserRouter} from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
     <div className="root">
+      <BrowserRouter>
       <Header />
       <Nav />
-      {/* <Main /> */}
-      {/* <Router>
-      <Route exact path={ROUTES.LANDING} component={LandingPage} />
-      <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-      <Route path={ROUTES.SIGN_IN} component={SignInPage} />
-      <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
-      <Route path={ROUTES.HOME} component={HomePage} />
-      <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-      <Route path={ROUTES.ADMIN} component={AdminPage} />
-    </div>
-  </Router> */}
+     </BrowserRouter>
     </div>
   );
 }

@@ -1,16 +1,10 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-scroll';
+import {Route, Switch} from "react-router";
 import Scroll from 'react-scroll'
 import { HashLink as Link } from 'react-router-hash-link';
-
-// import { HashLink as Link } from 'react-router-hash-link';
-
 import './Nav.css';
 
-
-
 class Nav extends Component {
-
   refWelcome = React.createRef()
   refEthics = React.createRef()
   refWashU = React.createRef()
@@ -32,28 +26,29 @@ class Nav extends Component {
   render() {
       return (
         <article>
-        <header>
-          <h1>Navigation</h1>
-        </header>
         <nav>
+        <div className = "sidebar-css">
           <ul>
-            <li onClick={() => { this.handleScrollTo(this.refWelcome) }} className = "nav-header">
+            <li className = "listClass" onClick={() => { this.handleScrollTo(this.refWelcome) }} className = "nav-header">
               Welcome
             </li>
-            <li onClick={() => { this.handleScrollTo(this.refEthics) }} className = "nav-header">
+            <li className = "listClass" onClick={() => { this.handleScrollTo(this.refEthics) }} className = "nav-header">
               Reporting and Journalism Ethics 
             </li>
-            <li onClick={() => { this.handleScrollTo(this.refWashU) }} className = "nav-header">
+            <li className = "listClass" onClick={() => { this.handleScrollTo(this.refWashU) }} className = "nav-header">
               Washington University 101 
             </li>            
-            <li onClick={() => { this.handleScrollTo(this.refWritingReporting) }} className = "nav-header">
+            <li className = "listClass" onClick={() => { this.handleScrollTo(this.refWritingReporting) }} className = "nav-header">
               Writing from Reporting 
             </li>
-            <li onClick={() => { this.handleScrollTo(this.refWritingExperience) }} className = "nav-header">
+            <li className = "listClass" onClick={() => { this.handleScrollTo(this.refWritingExperience) }} className = "nav-header">
             Writing from Experience 
             </li>
           </ul>
+          </div>
         </nav>
+
+        <div className = "main-css">
         <div className="spacer"></div>
         <div ref={this.refWelcome}>
           <h2 className = "nav-content-header">Welcome to Student Life</h2>
@@ -78,8 +73,9 @@ class Nav extends Component {
           <h2 className = "nav-content-header">Writing from Experience</h2>
           <p className = "nav-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
-      </article>     
-      );
+        </div> 
+      </article>  
+      )
     }
   }
 

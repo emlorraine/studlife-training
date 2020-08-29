@@ -1,8 +1,8 @@
 .header-text{
-    top: 0;
-    left: 0;
-    background-color:#b1170f;
-    color: white; 
+    margin-top: 20px;
+    margin-left: 24px; 
+    /* background-color:#b1170f; */
+    color:black; 
     font-family: Garamond; 
     font-size: 30px; 
     text-align: center; 
@@ -10,7 +10,8 @@
 }
 
 .intro-text{
-    background-color: white;
+    margin-top: 20px;
+    margin-left: 24px; 
     color: black; 
     font-family: Arial; 
     font-size: 26px; 
