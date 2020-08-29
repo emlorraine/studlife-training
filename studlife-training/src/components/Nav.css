@@ -62,22 +62,6 @@ body{
     width: 73%; 
 }
 
-@media(max-width: 761px){
-    .sidebar-css{
-      margin-left: 25% !important;
-    }
-    .main-css{
-        margin-left: 73% !important;
-    }
-  }
-  
-  @media(max-width: 991px){
-    .sidebar-css{
-        margin-left: 25% !important;
-      }
-      .main-css{
-          margin-left: 73% !important;
-      }
-  }
+
 
 
