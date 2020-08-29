@@ -2,17 +2,13 @@ body{
     margin-top: 0px; 
     margin-bottom: 0px; 
 }
-
-.header-text{
-    margin-top: 20px;
-    margin-left: 100%; 
+.main-header{
+    margin-top: 30px;
     color:black; 
     font-family: Garamond; 
-    font-size: 30px; 
+    font-size: 36px; 
     text-align: center; 
-
 }
-
 .intro-text{
     margin-top: 20px;
     margin-left: 100%; 
@@ -20,41 +16,37 @@ body{
     font-family: Arial; 
     font-size: 26px;
     font-family: Garamond; 
- 
 }
-
 .nav-header{
     font-family: Arial; 
     width: 100%; 
     list-style: none;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    top: 50px; 
 }
-
 .nav-content-header{
     margin-top: 100px;
     font-family: Arial, bold;
-    font-size: 3.5vw; 
+    font-size: 24px; 
     margin-bottom: 10px;
     margin-left: 24px;  
 }
-
 .nav-content{
     font-family: Garamond; 
     margin-bottom: 10px;
     margin-left: 24px;   
 }
-
-.listClass{
+/* .listClass{
     list-style: none;
     font-family: Arial; 
     font-size: 20px; 
     margin-top: 20px;
-    margin-bottom: 15px;
-}
-
+    margin-bottom: 50px;
+} */
 .sidebar-css{
     background-color:#b1170f;
+    color: white; 
     width: 25%; 
     height: 100%; 
     float: left; 
@@ -64,12 +56,28 @@ body{
     left:0px;
     right:0px;
 }
-
 .main-css{
     height: 100%; 
     float: right; 
-    width: 75%; 
-
+    width: 73%; 
 }
+
+@media(max-width: 761px){
+    .sidebar-css{
+      margin-left: 25% !important;
+    }
+    .main-css{
+        margin-left: 73% !important;
+    }
+  }
+  
+  @media(max-width: 991px){
+    .sidebar-css{
+        margin-left: 25% !important;
+      }
+      .main-css{
+          margin-left: 73% !important;
+      }
+  }
 
 

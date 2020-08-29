@@ -11,13 +11,10 @@ class Nav extends Component {
   refWritingReporting = React.createRef()
   refWritingExperience = React.createRef()
   refSubmit= React.createRef()
-
-
   componentDidMount() {
     this.setState(
       { loaded: true })
   }
-
   handleScrollTo = (elRef) => {
     const el = elRef.current ? elRef.current : elRef
     el.scrollIntoView({
@@ -31,32 +28,31 @@ class Nav extends Component {
         <nav>
         <div className = "sidebar-css">
           <ul>
-            <li className = "listClass" onClick={() => { this.handleScrollTo(this.refWelcome) }} className = "nav-header">
+            <li onClick={() => { this.handleScrollTo(this.refWelcome) }} className = "nav-header">
               Welcome
             </li>
-            <li className = "listClass" onClick={() => { this.handleScrollTo(this.refEthics) }} className = "nav-header">
+            <li onClick={() => { this.handleScrollTo(this.refEthics) }} className = "nav-header">
               Reporting and Journalism Ethics 
             </li>
-            <li className = "listClass" onClick={() => { this.handleScrollTo(this.refWashU) }} className = "nav-header">
+            <li onClick={() => { this.handleScrollTo(this.refWashU) }} className = "nav-header">
               Washington University 101 
             </li>            
-            <li className = "listClass" onClick={() => { this.handleScrollTo(this.refWritingReporting) }} className = "nav-header">
+            <li onClick={() => { this.handleScrollTo(this.refWritingReporting) }} className = "nav-header">
               Writing from Reporting 
             </li>
-            <li className = "listClass" onClick={() => { this.handleScrollTo(this.refWritingExperience) }} className = "nav-header">
+            <li onClick={() => { this.handleScrollTo(this.refWritingExperience) }} className = "nav-header">
               Writing from Experience 
             </li>
-            <li className = "listClass" onClick={() => { this.handleScrollTo(this.refSubmit) }} className = "nav-header">
+            <li onClick={() => { this.handleScrollTo(this.refSubmit) }} className = "nav-header">
               Submit  
             </li>          
             </ul>
           </div>
         </nav>
-
         <div className = "main-css">
         <div className="spacer"></div>
         <div ref={this.refWelcome}>
-          <h2 className = "nav-content-header">Welcome to Student Life</h2>
+          <h2 className = "main-header">Welcome to Student Life</h2>
           <p className = "nav-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
         <div className="spacer"></div>
@@ -87,5 +83,4 @@ class Nav extends Component {
       )
     }
   }
-
 export default Nav; 
