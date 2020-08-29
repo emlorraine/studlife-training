@@ -4,11 +4,18 @@
     margin-left: 24px;   
 }
 
+.nav-content-header{
+    font-family: Garamond, bold;
+    font-size: 24px; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 24px;  
+}
+
 .nav-content{
     font-family: Garamond; 
     margin-bottom: 10px;
     margin-left: 24px;   
-
 }
 
 
