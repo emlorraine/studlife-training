@@ -19,9 +19,11 @@
     "react-router-hash-link": "^2.0.0",
     "react-scripts": "3.4.1",
     "react-scroll": "^1.8.1",
+    "react-show-more-text": "^1.4.4",
     "react-sidebar": "^3.0.2",
     "react-tabs": "^3.1.1",
-    "reactstrap": "^8.5.1"
+    "reactstrap": "^8.5.1",
+    "read-more-react": "^1.0.10"
   },
   "scripts": {
     "start": "react-scripts start",
