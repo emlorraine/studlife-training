@@ -4,6 +4,8 @@ import Scroll from 'react-scroll'
 import { HashLink as Link } from 'react-router-hash-link';
 import './Nav.css';
 import ReadMoreReact from 'read-more-react';
+import { reportingText } from './text/reportingText.txt'; 
+
 
 
 class Nav extends Component {
@@ -66,7 +68,7 @@ class Nav extends Component {
         <div className="spacer"></div>
         <div ref={this.refEthics}>
           <h2 className = "nav-content-header">Journalism Ethics</h2>
-          <p className = "nav-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p className = "nav-content">($this.reportingText$)</p>
           </div>
         <div className="spacer"></div>
         <div ref={this.refWashU}>
