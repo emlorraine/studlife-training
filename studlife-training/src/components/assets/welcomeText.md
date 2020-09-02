@@ -2,7 +2,7 @@
 
 
 * Student Life has five main sections: 
-  * News: Our news team reports on all dimensions of Washington University. 
+  * News: Our news team reports on all dimensions of Washington University.
   * Scene: Scene reporters and writers produce engaging features that examine all aspects of the University. 
   * Forum: Our opinion section publishes staff columns, staff editorials and op-ed submissions from members of the campus community that seek to engage with questions and news about the University. 
   * Cadenza: Cadenza reporters and writers cover the arts and entertainment beat on campus, covering everything from campus performances to reviewing 
@@ -10,7 +10,7 @@
 
 No matter where your interests are, we have a place for you: 
 
-* Staff reporters: Staff reporters produce news, features, sports and arts pieces from reporting. Regardless of the section you’re writing for, these staffers speak with sources and compile objective, engaging and informative reported stories. 
+* Staff reporters: Staff reporters produce news, features, sports and arts pieces from reporting. Regardless of the section, these staffers speak with sources and compile objective, engaging and informative reported stories. 
 * Staff writers: Staff writers produce personal stories, opinion pieces and other commentary stories that capture their perspective and voice on campus. 
 * Copy editors: Copy editors edit stories from all sections to AP Style and Student Life’s internal stylebook.
 * Designers & photographers: Designers create graphics, illustrations, photos and other pieces of visual media to compliment stories and other projects. 
