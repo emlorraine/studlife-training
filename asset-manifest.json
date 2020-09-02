@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/studlife-training/static/css/main.ae9492f9.chunk.css",
+    "main.js": "/studlife-training/static/js/main.70f30001.chunk.js",
+    "main.js.map": "/studlife-training/static/js/main.70f30001.chunk.js.map",
+    "runtime-main.js": "/studlife-training/static/js/runtime-main.930c66c5.js",
+    "runtime-main.js.map": "/studlife-training/static/js/runtime-main.930c66c5.js.map",
+    "static/js/2.405014a2.chunk.js": "/studlife-training/static/js/2.405014a2.chunk.js",
+    "static/js/2.405014a2.chunk.js.map": "/studlife-training/static/js/2.405014a2.chunk.js.map",
+    "index.html": "/studlife-training/index.html",
+    "precache-manifest.9b3f67a16046fb875da1b176dd493bac.js": "/studlife-training/precache-manifest.9b3f67a16046fb875da1b176dd493bac.js",
+    "service-worker.js": "/studlife-training/service-worker.js",
+    "static/css/main.ae9492f9.chunk.css.map": "/studlife-training/static/css/main.ae9492f9.chunk.css.map",
+    "static/js/2.405014a2.chunk.js.LICENSE.txt": "/studlife-training/static/js/2.405014a2.chunk.js.LICENSE.txt",
+    "static/media/Main.css": "/studlife-training/static/media/Montserrat-Regular.ee653992.ttf",
+    "static/media/ethicsText.md": "/studlife-training/static/media/ethicsText.cfc97994.md",
+    "static/media/experienceActivity.md": "/studlife-training/static/media/experienceActivity.316743f8.md",
+    "static/media/experienceText.md": "/studlife-training/static/media/experienceText.3d8f9aaf.md",
+    "static/media/newsActivity.md": "/studlife-training/static/media/newsActivity.e8e3e46c.md",
+    "static/media/newsText.md": "/studlife-training/static/media/newsText.67330a17.md",
+    "static/media/reportingActivity.md": "/studlife-training/static/media/reportingActivity.4ee9e07b.md",
+    "static/media/reportingText.md": "/studlife-training/static/media/reportingText.4e95dd64.md",
+    "static/media/spj-code-of-ethics.png": "/studlife-training/static/media/spj-code-of-ethics.b008ed06.png",
+    "static/media/submissionText.md": "/studlife-training/static/media/submissionText.f344986a.md",
+    "static/media/washUActivity.md": "/studlife-training/static/media/washUActivity.53b8e30f.md",
+    "static/media/washUText.md": "/studlife-training/static/media/washUText.df4f0885.md",
+    "static/media/welcomeText.md": "/studlife-training/static/media/welcomeText.916f0518.md"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.930c66c5.js",
+    "static/js/2.405014a2.chunk.js",
+    "static/css/main.ae9492f9.chunk.css",
+    "static/js/main.70f30001.chunk.js"
+  ]
+}
