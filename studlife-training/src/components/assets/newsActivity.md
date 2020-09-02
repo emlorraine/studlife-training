@@ -1,31 +1,22 @@
-﻿You’re working on a news article announcing that the University’s Center for Diversity and Inclusion (CDI) has selected its next dean, Mark Kamimura-Jimenez. You’ve just finished all of your interviews and aren’t quite sure where to start.
+﻿**Writing from Reporting Activity**
+
+* You’re working on a news article announcing that the University’s Center for Diversity and Inclusion (CDI) has selected its next dean, Mark Kamimura-Jimenez. You’ve just finished all of your interviews and aren’t quite sure where to start.
 
 
-Here’s what you have:
-
-
-Source #1: Mark Kamimura-Jimenez, newest associate vice chancellor for student affairs and the dean of the Center for Diversity and Inclusion
-
-
-Source #2: Nicole Hudson, assistant vice chancellor of the Academy for Diversity and Inclusion
-
-
-Source #3: Adrienne Davis
+* Here’s what you have:
+  * __Source #1__: Mark Kamimura-Jimenez, newest associate vice chancellor for student affairs and the dean of the Center for Diversity and Inclusion
+  * __Source #2__: Nicole Hudson, assistant vice chancellor of the Academy for Diversity and Inclusion
+  * __Source #3__: Adrienne Davis
 Background information (from interview and online research): Vice provost and director of the Center for the Study of Race, Ethnicity & Equity
 
 
-
-
-The following three exercises will simulate the process of writing a reported article, and some of the most common points of confusion for new writers. There are no wrong answers to any of these questions— they’re designed to get you acquainted with the writing process!
+* The following three exercises will simulate the process of writing a reported article, and some of the most common points of confusion for new writers. There are no wrong answers to any of these questions— they’re designed to get you acquainted with the writing process!
 
 
 1. Using the information provided to you, write a lede for this article.
 
 
-2. All three of your interviews went really well, and you have a lot of great quotes to choose from, but you can’t decide which ones suit the story the best. Out of the quotes below, pick three to include in the article. In the space below, explain why you picked these three over the others, and how they will most effectively tell the story. What made them stand out to you?
-
-
-3. You’ve started writing, and you feel confident about which pieces of information you want to include in the article, but you’re not quite sure which parts are most important to the story and where they should appear chronologically. Keeping the inverted pyramid in mind, rank the following paragraphs in the order that you’d like to see them appear in the story. (#1 should be the paragraph you’d like to appear first, and #5 should be the one to appear last out of these options.) In the space below, briefly explain why your reasoning behind the ranking.
+2. You’ve started writing, and you feel confident about which pieces of information you want to include in the article, but you’re not quite sure which parts are most important to the story and where they should appear chronologically. Keeping the inverted pyramid in mind, rank the following paragraphs in the order that you’d like to see them appear in the story. (#1 should be the paragraph you’d like to appear first, and #5 should be the one to appear last out of these options.) In the space below, briefly explain why your reasoning behind the ranking.
 
 
 * Kamimura-Jimenez joining the CDI leadership team is a part of ongoing efforts to modify the center’s approach to diversity, including making the office itself more visible and accessible to students and expanding its internship program. The CDI’s efforts also coincide with Chancellor Andrew Martin’s emphasis on access and inclusion, including the WashU Pledge.

@@ -14,6 +14,8 @@ import experienceMarkdown from './assets/experienceText.md';
 import experienceActivityMarkdown from './assets/experienceActivity.md';
 import washUMarkdown from './assets/washUText.md';
 import washUActivityMarkdown from './assets/washUActivity.md';
+import ethicsTextMarkdown from './assets/ethicsText.md';
+import ethicsImage from './assets/spj-code-of-ethics.png';
 
 import './Nav.css';
 
@@ -29,6 +31,7 @@ class Nav extends Component {
     this.state = { experienceActivityMarkdown: null }
     this.state = { washUMarkdown: null }
     this.state = { washUActivityMarkdown: null }
+    this.state = { ethicsMarkdown: null }
   }
   refWelcome = React.createRef()
   refEthics = React.createRef()
@@ -67,6 +70,10 @@ class Nav extends Component {
     fetch(washUActivityMarkdown).then((response) => response.text()).then((text) => {
       this.setState({ washUActivityMarkdown: text })
     })
+    fetch(ethicsTextMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ ethicsMarkdown: text })
+    })
+
   }
   handleScrollTo = (elRef) => {
     const el = elRef.current ? elRef.current : elRef
@@ -116,6 +123,8 @@ class Nav extends Component {
         <div ref={this.refEthics}>
           <h2 className = "nav-content-header">Reporting Basics</h2>
           <ReactMarkdown className = "nav-content" source={this.state.reportingText} />
+          <ReactMarkdown className = "nav-content" source={this.state.ethicsMarkdown} />
+          <a href = "spj.org/ethicscode.asp#:~:text=Ethical%20journalism%20should%20be%20accurate,the%20accuracy%20of%20their%20work."><img src={ethicsImage} class = "img"/> </a>
           <ReactMarkdown className = "nav-content" source={this.state.reportingActivityMarkdown} />        
           </div>
         <div className="spacer"></div>
