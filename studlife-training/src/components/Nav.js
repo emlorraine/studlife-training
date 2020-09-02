@@ -15,6 +15,9 @@ import experienceActivityMarkdown from './assets/experienceActivity.md';
 import washUMarkdown from './assets/washUText.md';
 import washUActivityMarkdown from './assets/washUActivity.md';
 import ethicsTextMarkdown from './assets/ethicsText.md';
+import welcomeTexMarkdown from './assets/welcomeText.md';
+import submissionTextMarkdown from './assets/submissionText.md';
+
 import ethicsImage from './assets/spj-code-of-ethics.png';
 
 import './Nav.css';
@@ -32,6 +35,9 @@ class Nav extends Component {
     this.state = { washUMarkdown: null }
     this.state = { washUActivityMarkdown: null }
     this.state = { ethicsMarkdown: null }
+    this.state = { welcomeMarkdown: null }
+    this.state = { submissionMarkdown: null }
+
   }
   refWelcome = React.createRef()
   refEthics = React.createRef()
@@ -74,6 +80,12 @@ class Nav extends Component {
       this.setState({ ethicsMarkdown: text })
     })
 
+    fetch(welcomeTexMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ welcomeMarkdown: text })
+    })
+    fetch(submissionTextMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ submissionMarkdown: text })
+    })
   }
   handleScrollTo = (elRef) => {
     const el = elRef.current ? elRef.current : elRef
@@ -118,6 +130,7 @@ class Nav extends Component {
         <div className="spacer"></div>
         <div ref={this.refWelcome}>
           <h2 className = "main-header">Welcome to Student Life</h2>
+          <ReactMarkdown className = "header-content" source={this.state.welcomeMarkdown} />
         </div>
         <div className="spacer"></div>
         <div ref={this.refEthics}>
@@ -138,7 +151,6 @@ class Nav extends Component {
           <h2 className = "nav-content-header">Writing from Reporting</h2>
           <ReactMarkdown className = "nav-content" source={this.state.newsMarkdown} />
           <ReactMarkdown className = "nav-content" source={this.state.newsActivityMarkdown} />
-
         </div>
         <div ref={this.refWritingExperience}>
           <h2 className = "nav-content-header">Writing from Experience</h2>
@@ -147,6 +159,7 @@ class Nav extends Component {
         </div>
         <div ref={this.refSubmit}>
           <h2 className = "nav-content-header">Submit</h2>
+          <ReactMarkdown className = "nav-content" source={this.state.submissionMarkdown} />
         </div>
         </div> 
       </article>  
