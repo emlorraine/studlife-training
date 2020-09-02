@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Route, Switch} from "react-router";
 import Scroll from 'react-scroll'
 import { HashLink as Link } from 'react-router-hash-link';
-
+import './fonts/Montserrat/Montserrat-Regular.ttf'
 import ReadMoreReact from 'read-more-react';
 
 import ReactMarkdown from 'react-markdown';
@@ -109,7 +109,7 @@ class Nav extends Component {
               Welcome
             </li>
             <li onClick={() => { this.handleScrollTo(this.refEthics) }} className = "nav-header">
-              Reporting and Journalism Ethics 
+              Reporting and Ethics 
             </li>
             <li onClick={() => { this.handleScrollTo(this.refWashU) }} className = "nav-header">
               Washington University 101 
@@ -142,7 +142,7 @@ class Nav extends Component {
           </div>
         <div className="spacer"></div>
         <div ref={this.refWashU}>
-          <h2 className = "nav-content-header">Washigton University 101</h2>
+          <h2 className = "nav-content-header">Washington University 101</h2>
           <ReactMarkdown className = "nav-content" source={this.state.washUMarkdown} />
           <ReactMarkdown className = "nav-content" source={this.state.washUActivityMarkdown} />
         </div>
