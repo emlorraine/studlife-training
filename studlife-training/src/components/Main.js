@@ -1,299 +1,169 @@
-import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import {Tab, Tabs, TabList, TabPanel} from 'react-tabs'
+import React, { Component } from 'react'
+import {Route, Switch} from "react-router";
+import Scroll from 'react-scroll'
+import { HashLink as Link } from 'react-router-hash-link';
+import './fonts/Montserrat/Montserrat-Regular.ttf'
+import ReadMoreReact from 'read-more-react';
+
+import ReactMarkdown from 'react-markdown';
+import reportingMarkdown from './assets/reportingText.md';
+import reportingActivityMarkdown from './assets/reportingActivity.md';
+import newsMarkdown from './assets/newsText.md';
+import newsActivityMarkdown from './assets/newsActivity.md';
+import experienceMarkdown from './assets/experienceText.md';
+import experienceActivityMarkdown from './assets/experienceActivity.md';
+import washUMarkdown from './assets/washUText.md';
+import washUActivityMarkdown from './assets/washUActivity.md';
+import ethicsTextMarkdown from './assets/ethicsText.md';
+import welcomeTexMarkdown from './assets/welcomeText.md';
+import submissionTextMarkdown from './assets/submissionText.md';
+
+import ethicsImage from './assets/spj-code-of-ethics.png';
+
 import './Main.css';
-// import reportingText from './config/reportingText.txt';
-// import reportingActivity from './config/reportingActivity.txt';
-// import washUText from './config/washUText.txt';
-// import washUT from './config/reportingText.txt';
 
 
-//To the person reading this: 
-// I broke all of the edit/submission functions by their module type for functionality/testing purposes, but that certainly clutters this Main.js quite a bit. 
-// I was writing with each module in it's own file, but that made testing a bit of a pain. Happy to break this apart because this code looks not nice as is
+class Main extends Component {
+  constructor(props){
+    super(props)
+    this.state = { reportingText: null }
+    this.state = { reportingActivityMarkdown: null }
+    this.state = { newsMarkdown: null }
+    this.state = { newsActivityMarkdown: null }
+    this.state = { experienceMarkdown: null }
+    this.state = { experienceActivityMarkdown: null }
+    this.state = { washUMarkdown: null }
+    this.state = { washUActivityMarkdown: null }
+    this.state = { ethicsMarkdown: null }
+    this.state = { welcomeMarkdown: null }
+    this.state = { submissionMarkdown: null }
 
-const client_email =  "studlife-training-sheets@studlife-training-sheets.iam.gserviceaccount.com";
+  }
+  refWelcome = React.createRef()
+  refEthics = React.createRef()
+  refWashU = React.createRef()
+  refWritingReporting = React.createRef()
+  refWritingExperience = React.createRef()
+  refSubmit= React.createRef()
+  
 
-const modules = ['Welcome to Student Life', 'Reporting 101', 'Washington University 101', 'News & Writing from Reporting', 'Opinion & Writing from Experience', 'Inclusive Reporting'];
-var module_tracker = []; 
-var sendWelcomeInput = "";
-var sendReportingInput = ""; 
-var sendWashuInput = "";
-var sendNewsInput = ""; 
-var sendOpinionInput = "";
-var sendInclusiveInput = ""; 
+  componentDidMount() {
+    this.setState(
+      
+      { loaded: true })
+    
+    fetch(reportingMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ reportingText: text })
+    })
+    fetch(reportingActivityMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ reportingActivityMarkdown: text })
+    })
+    fetch(newsMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ newsMarkdown: text })
+    })
+    fetch(newsActivityMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ newsActivityMarkdown: text })
+    })
+    fetch(experienceMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ experienceMarkdown: text })
+    })
+    fetch(experienceActivityMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ experienceActivityMarkdown: text })
+    })
+    fetch(washUMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ washUMarkdown: text })
+    })
+    fetch(washUActivityMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ washUActivityMarkdown: text })
+    })
+    fetch(ethicsTextMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ ethicsMarkdown: text })
+    })
 
-class Main extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      welcomeInput: '',
-      reportingInput: '',
-      washuInput: '',
-      newsInput: '',
-      opinionInput: '',
-      inclusiveInput: ''
-    };
-    // this.handleWelcomeSubmit = this.handleWelcomeSubmit.bind(this); 
-    // this.handleReportingSubmit = this.handleReportingSubmit.bind(this); 
-    // this.handleWashUSubmit = this.handleWashUSubmit.bind(this); 
-    // this.handleNewsSubmit = this.handleNewsSubmit.bind(this); 
-    // this.handleOpinionSubmit = this.handleOpinionSubmit.bind(this); 
-    // this.handleInclusiveSubmit = this.handleInclusiveSubmit.bind(this); 
-
-    // this.handleWelcomeChange = this.handleWelcomeChange.bind(this);
-    // this.handleReportingChange = this.handleReportingChange.bind(this);
-    // this.handleWashUChange = this.handleWashUChange.bind(this);
-    // this.handleNewsChange = this.handleNewsChange.bind(this);
-    // this.handleOpinionChange = this.handleOpinionChange.bind(this);
-    // this.handleInclusiveChange = this.handleInclusiveChange.bind(this);
+    fetch(welcomeTexMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ welcomeMarkdown: text })
+    })
+    fetch(submissionTextMarkdown).then((response) => response.text()).then((text) => {
+      this.setState({ submissionMarkdown: text })
+    })
+  }
+  handleScrollTo = (elRef) => {
+    const el = elRef.current ? elRef.current : elRef
+    el.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
   }
 
-
-  // handleWelcomeChange = async function(e) {
-  //   await this.setState({welcomeInput: e.target.value});
-  //   sendWelcomeInput = this.state.welcomeInput;
-  //   // console.log(sendWelcomeInput);
-  // }
-
-  // handleReportingChange = async function(e) {
-  //   await this.setState({reportingInput: e.target.value});
-  //   sendReportingInput = this.state.reportingInput;
-  //   console.log(sendReportingInput);
-  //   module_tracker.push(sendWelcomeInput); 
-  // }
-
-  // handleWashUChange = async function(e) {
-  //   await this.setState({washuInput: e.target.value});
-  //   sendWashuInput = this.state.washuInput;
-  //   console.log(sendWashuInput);
-  // }  
-  
-  // handleNewsChange = async function(e) {
-  //   await this.setState({newsInput: e.target.value});
-  //   sendNewsInput = this.state.newsInput;
-  //   console.log(sendNewsInput);  
-  // }
-
-  // handleOpinionChange = async function(e) {
-  //   await this.setState({opinionInput: e.target.value});
-  //   sendOpinionInput = this.state.opinionInput;
-  //   console.log(sendOpinionInput); 
-  // }
-
-  // handleInclusiveChange = async function(e) {
-  //   await this.setState({inclusiveInput: e.target.value});
-  //   sendInclusiveInput = this.state.inclusiveInput;
-  //   console.log(sendInclusiveInput);
-  // }
-
-
-  // handleWelcomeSubmit = async function(e) {
-  //   e.preventDefault();
-  //   // console.log(sendWelcomeInput); 
-  //   // console.log(sendWelcomeInput.length); 
-  //   if((sendWelcomeInput.legnth >= 1) == true){
-  //     console.log("*confusion (cont.)*")
-  //     console.log(sendWelcomeInput); 
-  //     module_tracker.push(sendWelcomeInput);
-  //   }
-  //   else if (sendWelcomeInput === "" || (sendWelcomeInput.replace(/\s/g, '').length === 0)){
-  //     alert("Please complete this module before submitting.");
-  //   }
-  // }
-
-  // handleReportingSubmit = async function(e) {
-  //   e.preventDefault();
-  //   if(sendReportingInput.legnth >= 1){
-  //     console.log(sendReportingInput); 
-  //     module_tracker.push(sendReportingInput);
-  //     console.log("SUCESSFUL SUBMIT 2"); 
-  //   }
-  //   else if (sendReportingInput === "" || (sendReportingInput.replace(/\s/g, '').length === 0)){
-  //     alert("Please complete this module before submitting.");
-  //   }
-  // }
-
-  // handleWashUSubmit = async function(e) {
-  //   e.preventDefault();
-  //   if(sendWashuInput.legnth >= 1){
-  //     console.log(sendWashuInput); 
-  //     module_tracker.push(sendWashuInput); 
-  //     console.log("SUCESSFUL SUBMIT 3"); 
-  //   }
-  //   else if (sendWashuInput === "" || (sendWashuInput.replace(/\s/g, '').length === 0)){
-  //     alert("Please complete this module before submitting.");
-  //   }
-  // }
-
-  // handleNewsSubmit = async function(e) {
-  //   e.preventDefault();
-  //   if(sendNewsInput.legnth >= 1){
-  //     console.log(sendNewsInput); 
-  //     module_tracker.push(sendNewsInput); 
-  //     console.log("SUCESSFUL SUBMIT 4"); 
-
-  //   }
-  //   else if (sendNewsInput === "" || (sendNewsInput.replace(/\s/g, '').length === 0)){
-  //     alert("Please complete this module before submitting.");
-  //   }
-  // }
-
-  // handleOpinionSubmit = async function(e) {
-  //   e.preventDefault();
-  //   if(sendOpinionInput.legnth >= 1 && sendOpinionInput != ""){
-  //     console.log(sendOpinionInput); 
-  //     module_tracker.push(sendOpinionInput); 
-  //     console.log("SUCESSFUL SUBMIT 5"); 
-
-  //   }
-  //   else if (sendOpinionInput === "" || (sendOpinionInput.replace(/\s/g, '').length === 0)){
-  //     alert("Please complete this module before submitting.");
-  //   }
-  // }
-
-  // handleInclusiveSubmit = async function(e) {
-  //   e.preventDefault();
-  //   if(sendInclusiveInput.legnth >= 1){
-  //     console.log(sendInclusiveInput); 
-  //     module_tracker.push(sendInclusiveInput);
-  //     console.log("SUCESSFUL SUBMIT 6"); 
-
-  //   }
-  //   else if (sendInclusiveInput == "" || (sendInclusiveInput.replace(/\s/g, '').length === 0)){
-  //     alert("Please complete this module before submitting.");
-  //   }
-  // }
-
-
-  // submitToGoogleSheets() {
-  //   var values = [
-  //     [
-  //       //[USER INPUT]
-  //     ],
-  //   ];
-  //   var body = {
-  //     values: values
-  //   };
-  //   gapi.client.sheets.spreadsheets.values.update({
-  //      spreadsheetId: '1vFolZ0BmiI2VclYyigkHfgRs1lAMdLMUvyMgKFMDuIU',
-  //      //I've been manually updating this for testing. When the interface is set we can establish a ticker: 
-  //      range: "A2",
-  //      valueInputOption: "USER_ENTERED",
-  //      resource: body
-  //   }).then((response) => {
-  //     var result = response.result;
-  //     console.log(`${result.updatedCells} cells updated.`);
-  //   });
-  // }
-
-
-
-render() {
-  return (
-    <>
-      <Tabs defaultIndex = {1} onSelect={index => console.log(index)}>
-        <TabList>
-          <Tab>Welcome to Student Life</Tab>
-          <Tab>Reporting 101</Tab>
-          <Tab>The basics of Washington University</Tab>
-          <Tab>News and Writing from Reporting</Tab>
-          <Tab>Opinion and Writing from Experience</Tab>
-          <Tab>Inclusive Reporting</Tab>
-          <Tab>Submit</Tab>
-        </TabList>
-        <TabPanel>
-          Text for tab 1
-          {/* <form onSubmit={this.handleSubmit}> */}
-          <form>              
-            <input type="text" name="welcomeInput" placeholder="Filler text" onChange={this.handleWelcomeChange} value={this.state.welcomeInput}/>
-            <button onClick = {this.handleWelcomeSubmit}>Submit</button>
-            </form>
-        </TabPanel>
-        <TabPanel>
-          Text for tab 2
-          {/* <form onSubmit={this.handleSubmit}> */}
-          <form>              
-            <input type="text" name="reportingInput" placeholder="Filler text" onChange={this.handleReportingChange} value={this.state.reportingInput}/>
-              <button onClick = {this.handleReportingSubmit}>Submit</button>
-            </form>
-        </TabPanel>
-        <TabPanel>
-          Text for tab 3
-          {/* <form onSubmit={this.handleSubmit}> */}
-          <form>              
-              <input type="text" name="washuInput" placeholder="Filler text" onChange={this.handleWashUChange} value={this.state.washuInput}/>
-              <button onClick = {this.handleWashUSubmit}>Submit</button>
-            </form>
-        </TabPanel>
-        <TabPanel>
-          Text for tab 4
-          {/* <form onSubmit={this.handleSubmit}> */}
-          <form>              
-              <input type="text" name="newsInput" placeholder="Filler text" onChange={this.handleNewsChange} value={this.state.newsInput}/>
-              <button onClick = {this.handleNewsSubmit}>Submit</button>
-            </form>
-            </TabPanel>
-        <TabPanel>
-          Text for tab 5
-          {/* <form onSubmit={this.handleSubmit}> */}
-          <form>
-            <input type="text" name="opinionInput" placeholder="Filler text" onChange={this.handleOpinionChange} value={this.state.opinionInput}/>
-            <button onClick = {this.handleOpinionSubmit}>Submit</button>
-            </form>
-            </TabPanel>
-        <TabPanel>
-          Text for tab 6
-          {/* <form onSubmit={this.handleSubmit}> */}
-          <form>
-              <input type="text" name="inclusiveInput" placeholder="Filler text" onChange={this.handleInclusiveChange} value={this.state.inclusiveInput}/>
-              <button onClick = {this.handleInclusiveSubmit}>Submit</button>
-            </form>
-        </TabPanel>
-        <TabPanel>
-          Text for tab 6
-          <form onSubmit={this.handleSubmit}>
-              <input type="text" name="inclusiveInput" placeholder="Filler text" onChange={this.handleInclusiveChange} value={this.state.inclusiveInput}/>
-              <button onClick = {this.handleSubmit}>Submit</button>
-          </form>
-        </TabPanel>
-      </Tabs>
-      </>
-    // <div className = "main-css">
-    // <div className="spacer"></div>
-    // <div ref={this.refWelcome}>
-    //   <h2 className = "main-header">Welcome to Student Life</h2>
-    //   <p className = "nav-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    
-    // </div>
-    // <div className="spacer"></div>
-    // <div ref={this.refEthics}>
-    //   <h2 className = "nav-content-header">Journalism Ethics</h2>
-    //   <p className = "nav-content">{reportingText}</p>
-    //   </div>
-    // <div className="spacer"></div>
-    // <div ref={this.refWashU}>
-    //   <h2 className = "nav-content-header">Washigton University 101</h2>
-    //   <p className = "nav-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    // </div>
-    // <div className="spacer"></div>
-    // <div ref={this.refWritingReporting}>
-    //   <h2 className = "nav-content-header">Writing from Reporting</h2>
-    //   <p className = "nav-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    // </div>
-    // <div ref={this.refWritingExperience}>
-    //   <h2 className = "nav-content-header">Writing from Experience</h2>
-    //   <p className = "nav-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    // </div>
-    // <div ref={this.refSubmit}>
-    //   <h2 className = "nav-content-header">Submit</h2>
-    //   <p className = "nav-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    // </div>
-    // </div> 
-  )
-}
+  executeOnClick(isExpanded) {
+    console.log(isExpanded);
 }
 
-
-
-export default Main;
+  render() {
+      return (
+        <article>
+        <nav>
+        <div className = "sidebar-css">
+          <ul>
+            <li onClick={() => { this.handleScrollTo(this.refWelcome) }} className = "nav-header">
+              Welcome
+            </li>
+            <li onClick={() => { this.handleScrollTo(this.refEthics) }} className = "nav-header">
+              Reporting and Ethics 
+            </li>
+            <li onClick={() => { this.handleScrollTo(this.refWashU) }} className = "nav-header">
+              Washington University 101 
+            </li>            
+            <li onClick={() => { this.handleScrollTo(this.refWritingReporting) }} className = "nav-header">
+              Writing from Reporting 
+            </li>
+            <li onClick={() => { this.handleScrollTo(this.refWritingExperience) }} className = "nav-header">
+              Writing from Experience 
+            </li>
+            <li onClick={() => { this.handleScrollTo(this.refSubmit) }} className = "nav-header">
+              Submit  
+            </li>          
+            </ul>
+          </div>
+        </nav>
+        <div className = "main-css">
+        <div className="spacer"></div>
+        <div ref={this.refWelcome}>
+          <h2 className = "main-header">Welcome to Student Life</h2>
+          <ReactMarkdown className = "header-content" source={this.state.welcomeMarkdown} />
+        </div>
+        <div className="spacer"></div>
+        <div ref={this.refEthics}>
+          <h2 className = "nav-content-header">Reporting Basics</h2>
+          <ReactMarkdown className = "nav-content" source={this.state.reportingText} />
+          <ReactMarkdown className = "nav-content" source={this.state.ethicsMarkdown} />
+          <a href = "spj.org/ethicscode.asp#:~:text=Ethical%20journalism%20should%20be%20accurate,the%20accuracy%20of%20their%20work."><img src={ethicsImage} class = "img"/> </a>
+          <ReactMarkdown className = "nav-content" source={this.state.reportingActivityMarkdown} />        
+          </div>
+        <div className="spacer"></div>
+        <div ref={this.refWashU}>
+          <h2 className = "nav-content-header">Washington University 101</h2>
+          <ReactMarkdown className = "nav-content" source={this.state.washUMarkdown} />
+          <ReactMarkdown className = "nav-content" source={this.state.washUActivityMarkdown} />
+        </div>
+        <div className="spacer"></div>
+        <div ref={this.refWritingReporting}>
+          <h2 className = "nav-content-header">Writing from Reporting</h2>
+          <ReactMarkdown className = "nav-content" source={this.state.newsMarkdown} />
+          <ReactMarkdown className = "nav-content" source={this.state.newsActivityMarkdown} />
+        </div>
+        <div ref={this.refWritingExperience}>
+          <h2 className = "nav-content-header">Writing from Experience</h2>
+          <ReactMarkdown className = "nav-content" source={this.state.experienceMarkdown} />
+          <ReactMarkdown className = "nav-content" source={this.state.experienceActivityMarkdown} />
+        </div>
+        <div ref={this.refSubmit}>
+          <h2 className = "nav-content-header">Submit</h2>
+          <ReactMarkdown className = "nav-content" source={this.state.submissionMarkdown} />
+        </div>
+        </div> 
+      </article>  
+      )
+    }
+  }
+export default Main; 
