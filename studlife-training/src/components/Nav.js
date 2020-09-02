@@ -114,7 +114,7 @@ class Nav extends Component {
         </div>
         <div className="spacer"></div>
         <div ref={this.refEthics}>
-          <h2 className = "nav-content-header">Journalism Ethics</h2>
+          <h2 className = "nav-content-header">Reporting Basics</h2>
           <ReactMarkdown className = "nav-content" source={this.state.reportingText} />
           <ReactMarkdown className = "nav-content" source={this.state.reportingActivityMarkdown} />        
           </div>
