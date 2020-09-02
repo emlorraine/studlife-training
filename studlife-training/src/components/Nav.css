@@ -53,7 +53,8 @@ body{
 
 }
 .sidebar-css{
-    background-color:#b1170f;
+    /* background-color:#b1170f; */
+    background-color: #333; 
     color: white; 
     width: 25%; 
     height: 100%; 
