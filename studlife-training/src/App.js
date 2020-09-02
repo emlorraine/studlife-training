@@ -12,6 +12,7 @@ function App() {
     <div className="root">
       <BrowserRouter>
       <Nav />
+      {/* <Main /> */}
      </BrowserRouter>
     </div>
   );
