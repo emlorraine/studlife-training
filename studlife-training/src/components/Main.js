@@ -34,6 +34,16 @@ class Main extends Component {
     this.state = { welcomeMarkdown: null }
     this.state = { submissionMarkdown: null }
 
+    const LineBreak = ({ color }) => (
+        <hr
+            style={{
+                color: color,
+                backgroundColor: color,
+                height: 5
+            }}
+        />
+    );
+
   }
   refWelcome = React.createRef()
   refEthics = React.createRef()
@@ -90,8 +100,12 @@ class Main extends Component {
   }
 
 
+
+
   render() {
       return (
+      
+
         <article>
         <nav>
         <div className = "sidebar-css">
@@ -122,6 +136,7 @@ class Main extends Component {
         <div ref={this.refWelcome}>
           <h2 className = "main-header">Welcome to Student Life</h2>
           <ReactMarkdown className = "header-content" source={this.state.welcomeMarkdown} />
+          <hr />
         </div>
         <div className="spacer"></div>
         <div ref={this.refEthics}>
@@ -130,27 +145,35 @@ class Main extends Component {
           <ReactMarkdown className = "nav-content" source={this.state.ethicsMarkdown} />
           <a href = "spj.org/ethicscode.asp#:~:text=Ethical%20journalism%20should%20be%20accurate,the%20accuracy%20of%20their%20work."><img src={ethicsImage} class = "img"/> </a>
           <ReactMarkdown className = "nav-content" source={this.state.reportingActivityMarkdown} />        
+          <hr />
           </div>
         <div className="spacer"></div>
         <div ref={this.refWashU}>
           <h2 className = "nav-content-header">Washington University 101</h2>
           <ReactMarkdown className = "nav-content" source={this.state.washUMarkdown} />
           <ReactMarkdown className = "nav-content" source={this.state.washUActivityMarkdown} />
+          <hr />
+
         </div>
         <div className="spacer"></div>
         <div ref={this.refWritingReporting}>
           <h2 className = "nav-content-header">Writing from Reporting</h2>
           <ReactMarkdown className = "nav-content" source={this.state.newsMarkdown} />
           <ReactMarkdown className = "nav-content" source={this.state.newsActivityMarkdown} />
+          <hr />
+
         </div>
         <div ref={this.refWritingExperience}>
           <h2 className = "nav-content-header">Writing from Experience</h2>
           <ReactMarkdown className = "nav-content" source={this.state.experienceMarkdown} />
           <ReactMarkdown className = "nav-content" source={this.state.experienceActivityMarkdown} />
+          <hr />
+
         </div>
         <div ref={this.refSubmit}>
           <h2 className = "nav-content-header">Submit</h2>
           <ReactMarkdown className = "nav-content" source={this.state.submissionMarkdown} />
+          <hr />
         </div>
         </div> 
       </article>  
