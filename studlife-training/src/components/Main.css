@@ -22,14 +22,6 @@ body{
     font-size: 26px;
     font-family: Georgia; 
 }
-.nav-header{
-    font-family: Montserrat;
-    width: 100%; 
-    list-style: none;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    top: 50px; 
-}
 
 .nav-content-header{
     margin-top: 50px;
@@ -53,20 +45,24 @@ body{
 
 }
 .sidebar-css{
-    /* background-color:#b1170f; */
+    position: fixed;
     background-color: #333; 
     color: white; 
-    width: 25%; 
-    height: 100%; 
-    float: left; 
-    position:fixed;
-    top:0px;
-    bottom:0px;
-    left:0px;
-    right:0px;
-    text-align: left;
-    vertical-align: middle;
+    width: 100%; 
+    float: center; 
+    margin: 0;
+    list-style: none;
 }
+
+.nav-header{
+    margin-left: 20px; 
+    font-family: Montserrat;
+    width: 14%; 
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+} 
+
 .main-css{
     height: 100%; 
     float: right; 
@@ -79,5 +75,7 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
+
 
 

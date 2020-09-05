@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
-import {Route, Switch} from "react-router";
-import Scroll from 'react-scroll'
-import { HashLink as Link } from 'react-router-hash-link';
 import './fonts/Montserrat/Montserrat-Regular.ttf'
-import ReadMoreReact from 'read-more-react';
 
 import ReactMarkdown from 'react-markdown';
 import reportingMarkdown from './assets/reportingText.md';
@@ -49,9 +45,7 @@ class Main extends Component {
 
   componentDidMount() {
     this.setState(
-      
       { loaded: true })
-    
     fetch(reportingMarkdown).then((response) => response.text()).then((text) => {
       this.setState({ reportingText: text })
     })
@@ -95,9 +89,6 @@ class Main extends Component {
     })
   }
 
-  executeOnClick(isExpanded) {
-    console.log(isExpanded);
-}
 
   render() {
       return (
