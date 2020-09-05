@@ -1,12 +1,12 @@
 import React from 'react';
 import Main from './components/Main.js'
-import NavBar from './components/NavBar.js'
+import Header from './components/Header.js'
 
 
 function App() {
   return (
     <div className="root">
-      {/* <NavBar /> */}
+      <Header />
       <Main />
     </div>
   );

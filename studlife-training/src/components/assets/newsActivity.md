@@ -1,4 +1,4 @@
-﻿**Writing from Reporting Activity**
+**Writing from Reporting Activity**
 
 * You’re working on a news article announcing that the University’s Center for Diversity and Inclusion (CDI) has selected its next dean, Mark Kamimura-Jimenez. You’ve just finished all of your interviews and aren’t quite sure where to start.
 
@@ -10,7 +10,7 @@
 Background information (from interview and online research): Vice provost and director of the Center for the Study of Race, Ethnicity & Equity
 
 
-* The following three exercises will simulate the process of writing a reported article, and some of the most common points of confusion for new writers. There are no wrong answers to any of these questions— they’re designed to get you acquainted with the writing process!
+* The following two exercises will simulate the process of writing a reported article, and some of the most common points of confusion for new writers. There are no wrong answers to any of these questions— they’re designed to get you acquainted with the writing process!
 
 
 1. Using the information provided to you, write a lede for this article.

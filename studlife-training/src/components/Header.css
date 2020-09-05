@@ -1,0 +1,19 @@
+.site-header{
+    background-color: #b1170f;
+    margin: 0px; 
+}
+
+.logo{
+    padding-top: 20px;
+    margin-top: 25px; 
+    height: 225x; 
+    display: block;
+    margin: auto;  
+    max-width: 50%;
+} 
+.header-text{
+    font-family: Georgia; 
+    text-align: center;
+    font-size: 24px; 
+    margin-bottom: 20px; 
+}

@@ -33,17 +33,6 @@ class Main extends Component {
     this.state = { ethicsMarkdown: null }
     this.state = { welcomeMarkdown: null }
     this.state = { submissionMarkdown: null }
-
-    const LineBreak = ({ color }) => (
-        <hr
-            style={{
-                color: color,
-                backgroundColor: color,
-                height: 5
-            }}
-        />
-    );
-
   }
   refWelcome = React.createRef()
   refEthics = React.createRef()
@@ -104,8 +93,6 @@ class Main extends Component {
 
   render() {
       return (
-      
-
         <article>
         <nav>
         <div className = "sidebar-css">
@@ -133,8 +120,7 @@ class Main extends Component {
         </nav>
         <div className = "main-css">
         <div className="spacer"></div>
-        <div ref={this.refWelcome}>
-          <h2 className = "main-header">Welcome to Student Life</h2>
+        <div ref={this.refWelcome} className>
           <ReactMarkdown className = "header-content" source={this.state.welcomeMarkdown} />
           <hr />
         </div>
