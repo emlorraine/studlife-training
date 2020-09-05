@@ -49,6 +49,7 @@ body{
     width: 100%; 
     float: center; 
     list-style: none;
+    margin: 0px; 
 }
 
 .nav-header{
@@ -64,7 +65,7 @@ body{
 
 .main-css{
     float: left; 
-    margin-top: 75px;
+    /* margin-top: 75px; */
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 75px;
