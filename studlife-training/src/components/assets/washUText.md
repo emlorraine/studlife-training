@@ -1,28 +1,28 @@
-﻿
+
 
 * __The basics about how Washington University is structured__
   * The University was founded in 1853
   * Roughly 7600 undergraduates and 7500 graduates
-  * Made up of four undergraduate colleges
+  * Made up of four undergraduate colleges:
      * Arts & Sciences
      * Olin School of Business
      * McKelvey School of Engineering
      * Sam Fox School of Design and Visual Art (Art and Architecture)
   * Graduate schools also include the School of Law, the School of Medicine, and the Brown School of Social Work 
-  * The University has an endowment of more than $8 billion, though the use of most of that money is quite restricted because the donors who give the money have earmarked it for specific purposes
+  * The University has an endowment of more than $8 billion, though the use of most of that money is quite restricted because the donors who give the money have earmarked it for specific purposes.
 
 
 * __The Washington University Administration__
-  * The University is governed by its Board of Trustees, which is legally responsible for the University and is in charge of hiring the chancellor, approving final budgets, determining professor tenure, and managing the endowment, among other responsibilities
-  * The chancellor (essentially the University’s president) is responsible for all day-to-day operations. The chancellor has a seat on the Board of Trustees but is still ultimately responsible to those trustees at the end of the day.
+  * The University is governed by its Board of Trustees, which is legally responsible for the University and is in charge of hiring the chancellor, approving final budgets, determining professor tenure, and managing the endowment, among other responsibilities.
+  * The chancellor (essentially the University’s president) is responsible for all day-to-day operations. The chancellor has a seat on the Board of Trustees but is still ultimately responsible to those trustees.
   * The provost is the University’s chief academic officer, in charge of everything from teaching and curriculum to budgeting and academic facilities. 
   * The vice chancellor for student affairs oversees most non-academic aspects of the University, from Residential Life to the First Year Center and Campus Life
-  * The executive vice chancellor and chief administrative officer oversees a variety of administrative facets of the University, from campus security and capital projects to human resources and communications
+  * The executive vice chancellor and chief administrative officer oversees a variety of administrative facets of the University, from campus security and capital projects to human resources and communications.
 
 
 * __Important Campus Departments__
   * Residential Life deals with housing-related issues
-     * 74 percent of undergraduates (and essentially all freshmen and sophomores) live in University-owned and operated housing (some of which is off campus); the other 26 percent find their own off-campus housing
+     * 74 percent of undergraduates live in University-owned and operated housing (some of which is off campus); the other 26 percent find their own off-campus housing
      * South 40: The area just South of the main part of campus where all freshmen and most sophomores live. Includes the Bear’s Den, a main undergraduate dining hall on campus
      * The other main housing area on campus is the Village, which has a variety of housing options for sophomores, juniors and seniors
   * Campus Life
